@@ -1,0 +1,20 @@
+{
+  "my_username": "benagin",
+
+  "subreddits": [
+    { "name": "AskReddit", "sort": "hot", "num_posts": 1 },
+    { "name": "funny", "sort": "hot", "num_posts": 1 }
+  ],
+
+  "responses": [
+    {
+      "phrases": [ "funny", "Funny" ],
+      "response": "Hi, this is an example comment reply.",
+      "pm_subject": "Hi, this is an example pm subject.",
+      "pm_response": "Hi, this is an example pm response.",
+      "comment": false,
+      "pm": false,
+      "pm_me": false
+    }
+  ]
+}
