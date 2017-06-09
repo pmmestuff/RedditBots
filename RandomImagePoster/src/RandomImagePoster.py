@@ -63,7 +63,7 @@ def main():
 
         except Exception as e:
             print(e)
-            break;
+            break
 
         # Pick a random image until we get one that isn't cached.
         while(True):
@@ -75,7 +75,7 @@ def main():
                 print("Caching image ", link, ".", sep = '')
                 cache.append(link)
                 post(link, input['subreddit'])
-                break;
+                break
 
         # Wait for a specific number of hours. This is provided in the
         # input.json file.
