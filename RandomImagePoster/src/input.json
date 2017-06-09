@@ -1,5 +1,6 @@
 {
-  "album_path": "../album/",
+  "album_id": "<insert_album_id>",
   "frequency": 24,
-  "subreddit": "subreddit"
+  "repeat_frequency": 7,
+  "subreddit": "<insert_subreddit>"
 }
