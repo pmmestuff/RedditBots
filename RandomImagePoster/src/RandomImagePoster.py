@@ -14,18 +14,6 @@ from os.path import isfile, join
 # Initialize reddit object with .ini file.
 reddit = praw.Reddit('Authentication')
 
-# Imgur authentication information.
-client_id = 'insert_client_id'
-client_secret = 'insert_client_secret'
-
-# Connect to imgur.
-try:
-    client = ImgurClient(client_id, client_secret)
-
-except ImgurClientError as e:
-    print(e.error_message)
-    print(e.status_code)
-
 # Cache image files so that we don't repost the same image.
 # This cache is cleared every x days. x is provided in the input.json file.
 cache = []
@@ -48,6 +36,15 @@ def main():
     # frequency to repeat image posts.
     with open('input.json') as input_file:
         input = json.load(input_file)
+
+    # Connect to imgur.
+    try:
+        client = ImgurClient(input['imgur_client_id'],
+        input['imgur_client_secret'])
+
+    except ImgurClientError as e:
+        print(e.error_message)
+        print(e.status_code)
 
     # Execute thread to clear cache.
     thread = threading.Thread(target = clear_cache, args =

@@ -1,4 +1,6 @@
 {
+  "imgur_client_id": "<insert_client_id>",
+  "imgur_client_secret": "<insert_client_secret>",
   "album_id": "<insert_album_id>",
   "frequency": 24,
   "repeat_frequency": 7,
